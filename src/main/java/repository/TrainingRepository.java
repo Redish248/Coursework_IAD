@@ -1,7 +1,6 @@
 package repository;
 
 import entity.Training;
-import entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

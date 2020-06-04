@@ -46,7 +46,7 @@ public class SchedulerService {
         this.userService = userService;
     }
 
-    @Scheduled(cron = "0 0 9 * * *")
+    @Scheduled(cron = "0 01 1 * * *")
     public void prepareMap(){
         init();
         if (gameToday!=null) {
@@ -55,7 +55,7 @@ public class SchedulerService {
         }
     }
 
-    @Scheduled(cron = "0 17 23 * * *")
+    @Scheduled(cron = "0 50 9 * * *")
     public void prepareTributes(){
         init();
         if (gameToday!=null) {
@@ -134,11 +134,13 @@ public class SchedulerService {
         Calendar today = new GregorianCalendar();
         today.set(today.get(Calendar.YEAR), today.get(Calendar.MONTH), today.get(Calendar.DAY_OF_MONTH),0,0,0);
         gameToday = gameService.getGameByStartDate(today);
-        if (gameToday.getStatus().equals("game over")){
-            gameToday = null;
-        }
         if (gameToday!=null) {
-            tributesToday = tributeService.getTributesByGame(gameToday);
+            if (gameToday.getStatus().equals("game over")){
+                gameToday = null;
+                tributesToday = new ArrayList<>();
+            } else {
+                tributesToday = tributeService.getTributesByGame(gameToday);
+            }
         } else {
             tributesToday = new ArrayList<>();
         }

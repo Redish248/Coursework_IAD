@@ -2,11 +2,11 @@ package impl;
 
 import entity.Arena;
 import entity.Game;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import repository.ArenaRepository;
 import service.ArenaService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 @Service("arenaService")
 public class ArenaServiceImpl implements ArenaService {

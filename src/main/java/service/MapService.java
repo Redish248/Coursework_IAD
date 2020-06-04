@@ -1,7 +1,6 @@
 package service;
 
 import entity.Arena;
-import entity.Game;
 import entity.Map;
 
 import java.util.List;

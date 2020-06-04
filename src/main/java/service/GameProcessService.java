@@ -1,6 +1,9 @@
 package service;
 
-import entity.*;
+import entity.Game;
+import entity.Tribute;
+import entity.User;
+import entity.Weapon;
 
 import java.util.List;
 

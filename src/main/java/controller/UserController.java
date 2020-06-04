@@ -1,6 +1,5 @@
 package controller;
 
-import entity.Skill;
 import entity.User;
 import entity.UserSkill;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,13 +9,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.web.bind.annotation.*;
-import service.SkillService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import service.UserService;
 import service.UserSkillService;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/hungergames")

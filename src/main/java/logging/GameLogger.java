@@ -1,12 +1,18 @@
 package logging;
 
-import entity.*;
+import entity.Game;
+import entity.Tribute;
+import entity.User;
 import org.apache.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
-import service.*;
+import service.PriceService;
+import service.TributeService;
+import service.UserService;
 
 import java.util.Collection;
 

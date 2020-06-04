@@ -1,8 +1,8 @@
 package impl;
 
 import entity.Skill;
-import entity.UserSkill;
 import entity.User;
+import entity.UserSkill;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import repository.UserSkillRepository;

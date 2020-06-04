@@ -1,7 +1,6 @@
 package service;
 
 import entity.Training;
-import entity.User;
 
 import java.util.List;
 

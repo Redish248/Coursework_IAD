@@ -1,11 +1,18 @@
 package impl;
 
-import entity.*;
+import entity.Game;
+import entity.Status;
+import entity.Tribute;
+import entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import repository.*;
-import service.GameProcessService;
+import repository.MapRepository;
+import repository.SkillRepository;
+import repository.StatusRepository;
+import repository.TributeRepository;
+import repository.UserRepository;
+import repository.UserSkillRepository;
 import service.TributeService;
 
 import java.util.List;

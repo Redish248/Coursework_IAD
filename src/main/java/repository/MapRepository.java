@@ -1,7 +1,6 @@
 package repository;
 
 import entity.Arena;
-import entity.Game;
 import entity.Map;
 import org.springframework.data.repository.CrudRepository;
 

@@ -1,10 +1,10 @@
 package impl;
 
 import entity.Price;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import repository.PriceRepository;
 import service.PriceService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 @Service("priceService")
 public class PriceServiceImpl implements PriceService {

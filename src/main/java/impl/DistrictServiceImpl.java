@@ -1,10 +1,10 @@
 package impl;
 
 import entity.District;
-import repository.DistrictRepository;
-import service.DistrictService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import repository.DistrictRepository;
+import service.DistrictService;
 
 @Service("districtService")
 public class DistrictServiceImpl implements DistrictService {

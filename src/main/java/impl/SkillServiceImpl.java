@@ -1,13 +1,19 @@
 package impl;
 
-import entity.*;
+import entity.District;
+import entity.Skill;
+import entity.Training;
+import entity.Tribute;
+import entity.User;
+import entity.UserSkill;
+import entity.Weapon;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import repository.SkillRepository;
 import repository.UserRepository;
 import repository.UserSkillRepository;
 import service.SkillService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;

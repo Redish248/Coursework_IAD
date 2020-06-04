@@ -1,6 +1,9 @@
 package repository;
 
-import entity.*;
+import entity.PresentsToTribute;
+import entity.Shop;
+import entity.Tribute;
+import entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

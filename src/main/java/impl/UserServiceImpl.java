@@ -1,6 +1,11 @@
 package impl;
 
-import entity.*;
+import entity.District;
+import entity.Game;
+import entity.Role;
+import entity.Status;
+import entity.Tribute;
+import entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -10,7 +15,10 @@ import service.PriceService;
 import service.StatusService;
 import service.UserService;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.HashSet;
+import java.util.List;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
@@ -111,5 +119,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getSteward(Game game) {
         return userRepository.findUserByStewardGames(game);
+    }
+
+    @Override
+    public User getUserByEmail(String email) {
+        return userRepository.findUserByEmail(email);
     }
 }

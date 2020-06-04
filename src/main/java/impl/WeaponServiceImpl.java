@@ -4,12 +4,12 @@ import entity.Skill;
 import entity.Tribute;
 import entity.Weapon;
 import entity.WeaponsInGame;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import repository.WeaponRepository;
 import repository.WeaponsInGameRepository;
 import service.WeaponService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;

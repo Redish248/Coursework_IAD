@@ -1,12 +1,26 @@
 package impl;
 
 import controller.WebSocketController;
-import entity.*;
+import entity.Game;
+import entity.Skill;
+import entity.Status;
+import entity.Tribute;
+import entity.User;
+import entity.UserSkill;
+import entity.Weapon;
 import model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.*;
-import service.*;
+import repository.GameRepository;
+import repository.PriceRepository;
+import repository.SkillRepository;
+import service.DistrictService;
+import service.GameProcessService;
+import service.StatusService;
+import service.TributeService;
+import service.UserService;
+import service.UserSkillService;
+import service.WeaponService;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -43,7 +57,7 @@ public class GameProcessServiceImpl implements GameProcessService {
     public void changeStatusAfterEndOfTheGame(Game game, Tribute winner) {
         List<Tribute> allTributes = tributeService.getTributesByGame(game);
         User steward = userService.getSteward(game);
-        int sponsorProfit = priceRepository.findPriceByName("winner's sponsor").getCost();
+        int sponsorProfit = priceRepository.findPriceByName("winner sponsor").getCost();
         if (winner!=null) {
             winner.setStatus("Победитель");
             winner.getUser().setCash(winner.getUser().getCash() + priceRepository.findPriceByName("winner").getCost());

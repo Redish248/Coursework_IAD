@@ -1,6 +1,11 @@
 package service;
 
-import entity.*;
+import entity.District;
+import entity.Skill;
+import entity.Training;
+import entity.Tribute;
+import entity.User;
+import entity.Weapon;
 
 import java.util.List;
 import java.util.Map;

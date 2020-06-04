@@ -1,8 +1,8 @@
 package service;
 
 import entity.Skill;
-import entity.UserSkill;
 import entity.User;
+import entity.UserSkill;
 
 import java.util.List;
 

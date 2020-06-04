@@ -1,13 +1,15 @@
 package repository;
 
-import entity.*;
-import org.springframework.data.jpa.repository.JpaRepository;
+import entity.District;
+import entity.Game;
+import entity.Status;
+import entity.Tribute;
+import entity.User;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public interface UserRepository extends CrudRepository<User, Integer> {
@@ -67,4 +69,11 @@ public interface UserRepository extends CrudRepository<User, Integer> {
      * @return steward
      */
     User findUserByStewardGames(Game game);
+
+    /**
+     * find user by email address
+     * @param email email address
+     * @return user or null
+     */
+    User findUserByEmail(String email);
 }

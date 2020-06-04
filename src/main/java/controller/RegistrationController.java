@@ -6,23 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import service.*;
+import service.DistrictService;
+import service.PriceService;
+import service.SkillService;
+import service.StatusService;
+import service.UserService;
+import service.UserSkillService;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.awt.image.WritableRaster;
 import java.io.File;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Calendar;
 
 @RestController
@@ -77,7 +79,7 @@ public class RegistrationController {
         return ResponseEntity.status(HttpStatus.OK).body(user);
     }
 
-    @PostMapping
+/*    @PostMapping
     public  @ResponseBody ResponseEntity socialUser(String username, String password, boolean sex, int height, int weight, String birthday) {
         User user = userService.getUserByNick( SecurityContextHolder.getContext().getAuthentication().getName());
         Calendar calendar = Calendar.getInstance();
@@ -99,13 +101,13 @@ public class RegistrationController {
         userService.createUser(user);
         userSkillService.createUserSkill(userSkill);
         return ResponseEntity.status(HttpStatus.OK).body(user);
-    }
+    }*/
 
     public byte[] extractBytes (String ImageName) throws IOException {
         File imgPath = new File(ImageName);
         BufferedImage bufferedImage = ImageIO.read(imgPath);
         WritableRaster raster = bufferedImage .getRaster();
-        DataBufferByte data   = (DataBufferByte) raster.getDataBuffer();
+        DataBufferByte data = (DataBufferByte) raster.getDataBuffer();
 
         return ( data.getData() );
     }

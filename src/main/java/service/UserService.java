@@ -1,9 +1,12 @@
 package service;
 
-import entity.*;
+import entity.District;
+import entity.Game;
+import entity.Status;
+import entity.Tribute;
+import entity.User;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public interface UserService {
@@ -104,4 +107,6 @@ public interface UserService {
      * @return steward
      */
     User getSteward(Game game);
+
+    User getUserByEmail(String email);
 }

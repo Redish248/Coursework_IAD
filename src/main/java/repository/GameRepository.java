@@ -4,9 +4,7 @@ import entity.Game;
 import entity.User;
 import org.springframework.data.repository.CrudRepository;
 
-import javax.validation.constraints.NotNull;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public interface GameRepository extends CrudRepository<Game, Integer> {

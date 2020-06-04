@@ -2,14 +2,13 @@ package impl;
 
 import entity.Game;
 import entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import repository.GameRepository;
 import service.GameService;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 @Service("gameService")

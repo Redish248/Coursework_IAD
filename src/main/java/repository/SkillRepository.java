@@ -1,6 +1,10 @@
 package repository;
 
-import entity.*;
+import entity.District;
+import entity.Skill;
+import entity.Training;
+import entity.User;
+import entity.Weapon;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

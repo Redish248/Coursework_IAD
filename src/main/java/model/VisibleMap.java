@@ -1,6 +1,7 @@
 package model;
 
-import entity.*;
+import entity.Location;
+import entity.Map;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

@@ -1,7 +1,11 @@
 package impl;
 
 import controller.WebSocketController;
-import entity.*;
+import entity.Game;
+import entity.Hook;
+import entity.Location;
+import entity.Map;
+import entity.Tribute;
 import model.Message;
 import model.TributeHealth;
 import org.springframework.beans.factory.annotation.Autowired;
